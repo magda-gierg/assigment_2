@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import ComponentValidation from './ComponentValidation'
+import ValidationComponent  from './ValidationComponent'
 
 class App extends Component {
   state = {
     sentence: ""
   }
-sentenceHangler = (event) => {
+changeTextHangler = (event) => {
   this.setState({
     sentence: event.target.value
   })
@@ -16,9 +16,9 @@ sentenceHangler = (event) => {
     return (
       <div className="App">
       <p>Hi</p>
-      <input type="text" onChange={this.sentenceHangler}/>
+      <input type="text" onChange={this.changeTextHangler}/>
       <p>{this.state.sentence}</p>
-      <ComponentValidation />
+      <ValidationComponent sentenceLenght={this.state.sentence.length} />
       </div>
     );
   }
