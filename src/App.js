@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ComponentValidation from './ComponentValidation'
 
 class App extends Component {
   state = {
@@ -17,6 +18,7 @@ sentenceHangler = (event) => {
       <p>Hi</p>
       <input type="text" onChange={this.sentenceHangler}/>
       <p>{this.state.sentence}</p>
+      <ComponentValidation />
       </div>
     );
   }
